@@ -1,0 +1,13 @@
+/* Modern CSS Reset & Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+    'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+code {
+  font-family: 'Fira Code', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+}

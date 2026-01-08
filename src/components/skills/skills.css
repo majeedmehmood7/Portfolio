@@ -1,0 +1,102 @@
+/* ===================================
+   MODERN INFINITE SCROLL SKILLS
+   =================================== */
+
+.skills__track-container {
+  width: 100%;
+  overflow: hidden;
+  padding: var(--spacing-4) 0;
+  position: relative;
+  display: flex;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.skills__track {
+  display: flex;
+  gap: var(--spacing-8);
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.skills__track.reversed {
+  animation: scrollReverse 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - var(--spacing-4))); }
+}
+
+@keyframes scrollReverse {
+  0% { transform: translateX(calc(-50% - var(--spacing-4))); }
+  100% { transform: translateX(0); }
+}
+
+.skills__track:hover {
+  animation-play-state: paused;
+}
+
+.skills__pill {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-8);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: default;
+  white-space: nowrap;
+}
+
+.skills__pill:hover {
+  border-color: var(--hover-color);
+  background: var(--color-bg-secondary);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skills__pill-icon {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base);
+}
+
+.skills__pill:hover .skills__pill-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.skills__pill-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.mt-8 {
+  margin-top: var(--spacing-8);
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 768px) {
+  .skills__pill {
+    padding: var(--spacing-3) var(--spacing-6);
+    gap: var(--spacing-3);
+  }
+  
+  .skills__pill-icon {
+    font-size: 22px;
+  }
+  
+  .skills__track {
+    gap: var(--spacing-4);
+    animation-duration: 30s;
+  }
+}

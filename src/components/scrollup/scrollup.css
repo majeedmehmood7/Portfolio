@@ -1,0 +1,106 @@
+/* ===================================
+   PREMIUM SCROLLUP BUTTON
+   =================================== */
+
+.scrollup {
+  position: fixed;
+  left: var(--spacing-8);
+  bottom: -40px;
+  /* Hidden state */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.scrollup.show-scroll {
+  bottom: var(--spacing-8);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Glassmorphism Logic */
+.scrollup__icon-wrapper {
+  position: absolute;
+  inset: 4px;
+  background: var(--color-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.scrollup:hover .scrollup__icon-wrapper {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  transform: scale(0.9);
+  box-shadow: 0 0 20px var(--color-accent-light);
+}
+
+.scrollup__icon {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-base);
+}
+
+.scrollup:hover .scrollup__icon {
+  transform: translateY(-2px);
+}
+
+/* Progress Circle */
+.scrollup__svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.scrollup__track {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 4px;
+}
+
+.scrollup__progress {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  /* 2 * PI * R (45) */
+  transition: stroke-dashoffset 0.1s ease;
+}
+
+[data-theme="dark"] .scrollup__icon-wrapper {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Response Design */
+@media screen and (max-width: 768px) {
+  .scrollup {
+    left: var(--spacing-6);
+  }
+
+  .scrollup.show-scroll {
+    bottom: var(--spacing-6);
+  }
+
+  .scrollup {
+    width: 44px;
+    height: 44px;
+  }
+}
