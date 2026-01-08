@@ -170,7 +170,7 @@ const Header = ({ isHidden, theme, toggleTheme }) => {
           <div className="nav__overlay-footer">
             <div className="nav__overlay-socials">
               <a
-                href="https://www.linkedin.com/in/engr-abdullah-afzal-96b962208/"
+                href="https://www.linkedin.com/in/majeed-mehmood-2b209b230"
                 target="_blank"
                 rel="noreferrer"
                 className="nav__overlay-social"
@@ -178,7 +178,7 @@ const Header = ({ isHidden, theme, toggleTheme }) => {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/afzalabdullah"
+                href="https://github.com/majeedmehmood7"
                 target="_blank"
                 rel="noreferrer"
                 className="nav__overlay-social"
@@ -187,7 +187,7 @@ const Header = ({ isHidden, theme, toggleTheme }) => {
               </a>
             </div>
             <p className="nav__overlay-copy">
-              © {new Date().getFullYear()} Abdullah. All rights reserved.
+              © {new Date().getFullYear()} Majeed. All rights reserved.
             </p>
           </div>
         </div>
