@@ -2,8 +2,6 @@
 
 A premium, high-performance portfolio website built with React and Vanilla CSS, featuring a sleek modern design, dynamic animations, and a fully integrated CV viewer.
 
-![Portfolio Preview](https://via.placeholder.com/1200x600?text=Portfolio+Landing+Page+Preview)
-
 ## ✨ Key Features
 
 -   **🎯 Dynamic User Interface**: Built with modern aesthetics including glassmorphism, smooth gradients, and micro-animations.
@@ -65,4 +63,4 @@ npm run build
 
 ---
 
-*Designed and developed with ❤️ by Afzal Abdullah*
+*Designed and developed with ❤️ by Majeed Mehmood*
