@@ -1,6 +1,7 @@
 import React from "react";
+import { FaCss3Alt } from "react-icons/fa";
 import {
-  SiHtml5, SiCss3, SiJavascript, SiBootstrap,
+  SiHtml5, SiJavascript, SiBootstrap,
   SiNodedotjs, SiMysql, SiDotnet,
   SiGit, SiPostman, SiFigma, SiFirebase
 } from "react-icons/si";
@@ -10,7 +11,7 @@ import "./skills.css";
 const Skills = () => {
   const allSkills = [
     { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26" },
-    { name: "CSS3", icon: <SiCss3 />, color: "#1572B6" },
+    { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
     { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
     { name: "Bootstrap", icon: <SiBootstrap />, color: "#7952B3" },
     { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
